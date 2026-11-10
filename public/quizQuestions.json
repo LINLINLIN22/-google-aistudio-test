@@ -1,0 +1,462 @@
+[
+  {
+    "id": "calc-lim-01",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "基礎有理式極限求值",
+    "difficulty": "easy",
+    "mathExpression": "\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}",
+    "targetTask": "計算此極限的數值。",
+    "acceptedAnswers": ["4", "=4", "L=4"],
+    "standardAnswerLatex": "4",
+    "answerFormatHelp": "請輸入純數值（例如：4）",
+    "hints": {
+      "technique": "代入 $x=2$ 會得到 $\\frac{0}{0}$ 未定型。透過分子因式分解消除使分母為零的因子 $(x - 2)$。",
+      "formulaKey": "平方差公式：$x^2 - 4 = (x - 2)(x + 2)$。",
+      "stepGuide": "第一步：將分子分解為 $(x - 2)(x + 2)$。\n第二步：約去公因式 $(x - 2)$，得到簡化式 $(x + 2)$。\n第三步：代入 $x = 2$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2} = \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)}{x - 2}$$\n當 $x \\to 2$ 時 $x \\ne 2$，約分得：\n$$= \\lim_{x \\to 2} (x + 2) = 2 + 2 = 4$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-lim-02",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "重要三角極限計算",
+    "difficulty": "easy",
+    "mathExpression": "\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}",
+    "targetTask": "計算此極限的數值。",
+    "acceptedAnswers": ["5", "=5", "L=5"],
+    "standardAnswerLatex": "5",
+    "answerFormatHelp": "請輸入純數值（例如：5）",
+    "hints": {
+      "technique": "利用標準三角極限公式 $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$。此處將分母配上係數 $5$。",
+      "formulaKey": "核心公式：$\\lim_{u \\to 0} \\frac{\\sin(u)}{u} = 1$。",
+      "stepGuide": "將原式改寫為 $5 \\cdot \\frac{\\sin(5x)}{5x}$，並令 $u = 5x$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\lim_{x \\to 0} \\frac{\\sin(5x)}{x} = \\lim_{x \\to 0} \\left( 5 \\cdot \\frac{\\sin(5x)}{5x} \\right)$$\n令 $u = 5x$，當 $x \\to 0$ 時 $u \\to 0$：\n$$= 5 \\cdot \\lim_{u \\to 0} \\frac{\\sin(u)}{u} = 5 \\cdot 1 = 5$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-lim-03",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "根式有理化極限計算",
+    "difficulty": "medium",
+    "mathExpression": "\\lim_{x \\to 1} \\frac{\\sqrt{x} - 1}{x - 1}",
+    "targetTask": "計算此極限的精確數值（小數或分數）。",
+    "acceptedAnswers": ["1/2", "0.5", "=1/2", "=0.5"],
+    "standardAnswerLatex": "\\frac{1}{2}",
+    "answerFormatHelp": "請輸入分數 1/2 或小數 0.5",
+    "hints": {
+      "technique": "分子分母同乘共軛式 $(\\sqrt{x} + 1)$ 進行有理化，或將分母視為 $(\\sqrt{x})^2 - 1$ 分解。",
+      "formulaKey": "共軛有理化：$(\\sqrt{x} - 1)(\\sqrt{x} + 1) = x - 1$。",
+      "stepGuide": "第一步：分子分母同乘 $(\\sqrt{x} + 1)$。\n第二步：分子化簡為 $(x - 1)$ 並與分母 $(x - 1)$ 約分。\n第三步：代入 $x = 1$ 計算 $\\frac{1}{\\sqrt{1} + 1}$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\lim_{x \\to 1} \\frac{\\sqrt{x} - 1}{x - 1} = \\lim_{x \\to 1} \\frac{(\\sqrt{x} - 1)(\\sqrt{x} + 1)}{(x - 1)(\\sqrt{x} + 1)}$$\n$$= \\lim_{x \\to 1} \\frac{x - 1}{(x - 1)(\\sqrt{x} + 1)}$$\n約去 $(x - 1)$：\n$$= \\lim_{x \\to 1} \\frac{1}{\\sqrt{x} + 1} = \\frac{1}{\\sqrt{1} + 1} = \\frac{1}{2}$$"
+    },
+    "xpReward": 120
+  },
+  {
+    "id": "calc-lim-04",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "指數型未定型極限計算",
+    "difficulty": "medium",
+    "mathExpression": "\\lim_{x \\to 0} \\frac{e^{3x} - 1}{x}",
+    "targetTask": "計算此極限的數值。",
+    "acceptedAnswers": ["3", "=3", "L=3"],
+    "standardAnswerLatex": "3",
+    "answerFormatHelp": "請輸入純數值（例如：3）",
+    "hints": {
+      "technique": "此為 $\\frac{0}{0}$ 型極限。可使用羅必達法則 (L'Hôpital's Rule)，或利用導函數定義。",
+      "formulaKey": "羅必達法則：若 $\\lim \\frac{f}{g}$ 為 $\\frac{0}{0}$，則等於 $\\lim \\frac{f'(x)}{g'(x)}$。",
+      "stepGuide": "對分子與分母分別關於 $x$ 微分：\n- 分子微分：$\\frac{d}{dx}(e^{3x} - 1) = 3e^{3x}$\n- 分母微分：$\\frac{d}{dx}(x) = 1$\n接著代入 $x = 0$。",
+      "fullSolution": "### 完整計算步驟：\n應用羅必達法則：\n$$\\lim_{x \\to 0} \\frac{e^{3x} - 1}{x} = \\lim_{x \\to 0} \\frac{\\frac{d}{dx}(e^{3x} - 1)}{\\frac{d}{dx}(x)} = \\lim_{x \\to 0} \\frac{3e^{3x}}{1}$$\n代入 $x = 0$：\n$$= \\frac{3e^{0}}{1} = 3 \\cdot 1 = 3$$"
+    },
+    "xpReward": 120
+  },
+  {
+    "id": "calc-lim-05",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "二次三角未定型極限",
+    "difficulty": "hard",
+    "mathExpression": "\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2}",
+    "targetTask": "計算此極限的精確數值（小數或分數）。",
+    "acceptedAnswers": ["1/2", "0.5", "=1/2", "=0.5"],
+    "standardAnswerLatex": "\\frac{1}{2}",
+    "answerFormatHelp": "請輸入分數 1/2 或小數 0.5",
+    "hints": {
+      "technique": "使用半角公式 $1 - \\cos(x) = 2\\sin^2(x/2)$，或連續使用兩次羅必達法則。",
+      "formulaKey": "二階羅必達或半角公式：$\\sin(u)/u \\to 1$。",
+      "stepGuide": "第一次羅必達：$\\frac{\\sin(x)}{2x}$。\n第二次羅必達：$\\frac{\\cos(x)}{2}$。\n代入 $x = 0$ 得到 $\\frac{\\cos(0)}{2} = \\frac{1}{2}$。",
+      "fullSolution": "### 完整計算步驟：\n連續使用兩次羅必達法則（皆為 $\\frac{0}{0}$ 未定型）：\n$$\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2} = \\lim_{x \\to 0} \\frac{\\sin(x)}{2x} = \\lim_{x \\to 0} \\frac{\\cos(x)}{2}$$\n代入 $x = 0$：\n$$= \\frac{\\cos(0)}{2} = \\frac{1}{2} = 0.5$$"
+    },
+    "xpReward": 140
+  },
+  {
+    "id": "calc-lim-06",
+    "category": "limit",
+    "categoryName": "極限運算",
+    "categoryBadge": "⚡",
+    "title": "無窮遠處多項式分式極限",
+    "difficulty": "easy",
+    "mathExpression": "\\lim_{x \\to \\infty} \\frac{4x^3 - 2x + 7}{2x^3 + 5x^2 - 1}",
+    "targetTask": "計算 $x \\to \\infty$ 時的極限值。",
+    "acceptedAnswers": ["2", "=2", "L=2"],
+    "standardAnswerLatex": "2",
+    "answerFormatHelp": "請輸入純數值（例如：2）",
+    "hints": {
+      "technique": "分子分母同除以最高次方 $x^3$，其餘低階次項在 $x \\to \\infty$ 時皆趨於 $0$。",
+      "formulaKey": "最高次項係數比：$\\lim_{x \\to \\infty} \\frac{a x^n + \\cdots}{b x^n + \\cdots} = \\frac{a}{b}$。",
+      "stepGuide": "分子分母除以 $x^3$ 得 $\\frac{4 - 2/x^2 + 7/x^3}{2 + 5/x - 1/x^3} \\to \\frac{4}{2} = 2$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\lim_{x \\to \\infty} \\frac{4x^3 - 2x + 7}{2x^3 + 5x^2 - 1} = \\lim_{x \\to \\infty} \\frac{4 - \\frac{2}{x^2} + \\frac{7}{x^3}}{2 + \\frac{5}{x} - \\frac{1}{x^3}} = \\frac{4 - 0 + 0}{2 + 0 - 0} = \\frac{4}{2} = 2$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-der-01",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "多項式高階導數在指定點之值",
+    "difficulty": "easy",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(4x^3 - 5x^2 + 6x - 9\\right)\\right|_{x=2}",
+    "targetTask": "計算多項式在 $x=2$ 處的導數值。",
+    "acceptedAnswers": ["34", "=34"],
+    "standardAnswerLatex": "34",
+    "answerFormatHelp": "請輸入純數值（例如：34）",
+    "hints": {
+      "technique": "使用冪次微分法則 $\\frac{d}{dx}(x^n) = n x^{n-1}$ 逐項微分，再將 $x=2$ 代入導函數。",
+      "formulaKey": "多項式微分：$\\frac{d}{dx}(ax^n) = a \\cdot n x^{n-1}$，常數項微分為 $0$。",
+      "stepGuide": "求導函數：\n$$f'(x) = 4(3x^2) - 5(2x) + 6(1) - 0 = 12x^2 - 10x + 6$$\n代入 $x = 2$ 計算。",
+      "fullSolution": "### 完整計算步驟：\n1. 求導函數 $f'(x)$：\n   $$f'(x) = 12x^2 - 10x + 6$$\n2. 代入 $x = 2$：\n   $$f'(2) = 12(2^2) - 10(2) + 6 = 12(4) - 20 + 6 = 48 - 20 + 6 = 34$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-der-02",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "對數連鎖律微分計算",
+    "difficulty": "medium",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(\\ln(3x + 1)\\right)\\right|_{x=1}",
+    "targetTask": "計算此導函數在 $x=1$ 處的值（分數或小數）。",
+    "acceptedAnswers": ["3/4", "0.75", "=3/4", "=0.75"],
+    "standardAnswerLatex": "\\frac{3}{4}",
+    "answerFormatHelp": "請輸入分數 3/4 或小數 0.75",
+    "hints": {
+      "technique": "利用自然對數連鎖律：$\\frac{d}{dx}\\ln(u(x)) = \\frac{u'(x)}{u(x)}$。",
+      "formulaKey": "連鎖律公式：$\\frac{d}{dx}\\ln(u) = \\frac{1}{u} \\cdot \\frac{du}{dx}$。",
+      "stepGuide": "令 $u(x) = 3x + 1$，則 $u'(x) = 3$。\n導函數為 $f'(x) = \\frac{3}{3x + 1}$。代入 $x = 1$。",
+      "fullSolution": "### 完整計算步驟：\n1. 應用連鎖律：\n   $$\\frac{d}{dx}[\\ln(3x + 1)] = \\frac{1}{3x + 1} \\cdot \\frac{d}{dx}(3x + 1) = \\frac{3}{3x + 1}$$\n2. 將 $x = 1$ 代入：\n   $$\\left.\\frac{3}{3x + 1}\\right|_{x=1} = \\frac{3}{3(1) + 1} = \\frac{3}{4} = 0.75$$"
+    },
+    "xpReward": 110
+  },
+  {
+    "id": "calc-der-03",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "除法商法則計算 (Quotient Rule)",
+    "difficulty": "medium",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(\\frac{x}{x + 2}\\right)\\right|_{x=2}",
+    "targetTask": "計算此分式在 $x=2$ 處的導數值（分數或小數）。",
+    "acceptedAnswers": ["1/8", "0.125", "=1/8", "=0.125"],
+    "standardAnswerLatex": "\\frac{1}{8}",
+    "answerFormatHelp": "請輸入分數 1/8 或小數 0.125",
+    "hints": {
+      "technique": "使用商法則 (Quotient Rule)：$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$。",
+      "formulaKey": "商法則公式：$\\frac{d}{dx}\\left(\\frac{u}{v}\\right) = \\frac{u' v - u v'}{v^2}$。",
+      "stepGuide": "令 $u = x, v = x + 2$：\n$$f'(x) = \\frac{(1)(x + 2) - x(1)}{(x + 2)^2} = \\frac{2}{(x + 2)^2}$$\n將 $x = 2$ 代入計算。",
+      "fullSolution": "### 完整計算步驟：\n1. 應用商法則：\n   $$\\frac{d}{dx}\\left(\\frac{x}{x + 2}\\right) = \\frac{(x)'(x + 2) - x(x + 2)'}{(x + 2)^2} = \\frac{1 \\cdot (x + 2) - x \\cdot 1}{(x + 2)^2} = \\frac{2}{(x + 2)^2}$$\n2. 代入 $x = 2$：\n   $$f'(2) = \\frac{2}{(2 + 2)^2} = \\frac{2}{4^2} = \\frac{2}{16} = \\frac{1}{8} = 0.125$$"
+    },
+    "xpReward": 120
+  },
+  {
+    "id": "calc-der-04",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "三角函數連鎖律導函數計算",
+    "difficulty": "easy",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(\\sin(3x)\\right)\\right|_{x=0}",
+    "targetTask": "計算此導函數在 $x=0$ 處的值。",
+    "acceptedAnswers": ["3", "=3"],
+    "standardAnswerLatex": "3",
+    "answerFormatHelp": "請輸入純數值（例如：3）",
+    "hints": {
+      "technique": "利用連鎖律：$\\frac{d}{dx}\\sin(u) = \\cos(u) \\cdot u'$。",
+      "formulaKey": "三角微分公式：$\\frac{d}{dx}\\sin(kx) = k \\cos(kx)$。",
+      "stepGuide": "導函數為 $3 \\cos(3x)$。\n代入 $x = 0$ 得到 $3 \\cos(0) = 3 \\cdot 1$。",
+      "fullSolution": "### 完整計算步驟：\n1. 根據連鎖律求導：\n   $$\\frac{d}{dx}[\\sin(3x)] = \\cos(3x) \\cdot \\frac{d}{dx}(3x) = 3\\cos(3x)$$\n2. 代入 $x = 0$：\n   $$3\\cos(3 \\cdot 0) = 3\\cos(0) = 3 \\cdot 1 = 3$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-der-05",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "複合根式導函數求值",
+    "difficulty": "hard",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(\\sqrt{2x + 5}\\right)\\right|_{x=2}",
+    "targetTask": "計算此根式在 $x=2$ 處的導數值（分數或小數）。",
+    "acceptedAnswers": ["1/3", "0.333", "0.33", "=1/3"],
+    "standardAnswerLatex": "\\frac{1}{3}",
+    "answerFormatHelp": "請輸入分數 1/3 或小數 0.333",
+    "hints": {
+      "technique": "將根號寫為 $\\frac{1}{2}$ 次方：$(2x + 5)^{1/2}$，再套用連鎖律。",
+      "formulaKey": "公式：$\\frac{d}{dx}(u^{1/2}) = \\frac{1}{2\\sqrt{u}} \\cdot u'$。",
+      "stepGuide": "導函數為 $\\frac{1}{2\\sqrt{2x + 5}} \\cdot 2 = \\frac{1}{\\sqrt{2x + 5}}$。\n代入 $x = 2$ 得到 $\\frac{1}{\\sqrt{9}}$。",
+      "fullSolution": "### 完整計算步驟：\n1. 換寫為指數形式求導：\n   $$\\frac{d}{dx}\\left[(2x + 5)^{1/2}\\right] = \\frac{1}{2}(2x + 5)^{-1/2} \\cdot \\frac{d}{dx}(2x + 5) = \\frac{1}{2\\sqrt{2x + 5}} \\cdot 2 = \\frac{1}{\\sqrt{2x + 5}}$$\n2. 代入 $x = 2$：\n   $$f'(2) = \\frac{1}{\\sqrt{2(2) + 5}} = \\frac{1}{\\sqrt{9}} = \\frac{1}{3} \\approx 0.333$$"
+    },
+    "xpReward": 130
+  },
+  {
+    "id": "calc-der-06",
+    "category": "derivative",
+    "categoryName": "微分運算",
+    "categoryBadge": "📐",
+    "title": "二次複合對數導函數求值",
+    "difficulty": "medium",
+    "mathExpression": "\\left.\\frac{d}{dx}\\left(\\ln(x^2 + 1)\\right)\\right|_{x=1}",
+    "targetTask": "計算此導函數在 $x=1$ 處的值。",
+    "acceptedAnswers": ["1", "=1"],
+    "standardAnswerLatex": "1",
+    "answerFormatHelp": "請輸入純數值（例如：1）",
+    "hints": {
+      "technique": "利用對數連鎖律：$\\frac{d}{dx}\\ln(u) = \\frac{u'}{u}$。",
+      "formulaKey": "公式：$\\frac{d}{dx}\\ln(x^2 + 1) = \\frac{2x}{x^2 + 1}$。",
+      "stepGuide": "求導得到 $\\frac{2x}{x^2 + 1}$，將 $x = 1$ 代入計算。",
+      "fullSolution": "### 完整計算步驟：\n1. 連鎖律求導：\n   $$f'(x) = \\frac{1}{x^2 + 1} \\cdot \\frac{d}{dx}(x^2 + 1) = \\frac{2x}{x^2 + 1}$$\n2. 代入 $x = 1$：\n   $$f'(1) = \\frac{2(1)}{1^2 + 1} = \\frac{2}{2} = 1$$"
+    },
+    "xpReward": 110
+  },
+  {
+    "id": "calc-int-01",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "基礎多項式定積分求值",
+    "difficulty": "easy",
+    "mathExpression": "\\int_0^3 (2x + 1) \\, dx",
+    "targetTask": "計算此定積分的精確值。",
+    "acceptedAnswers": ["12", "=12"],
+    "standardAnswerLatex": "12",
+    "answerFormatHelp": "請輸入純數值（例如：12）",
+    "hints": {
+      "technique": "找出反導函數 $F(x)$，再代入微積分基本定理 $F(3) - F(0)$。",
+      "formulaKey": "反導函數：$\\int 2x \\, dx = x^2$，$\\int 1 \\, dx = x$。",
+      "stepGuide": "反導函數為 $F(x) = x^2 + x$。\n計算 $F(3) - F(0) = (3^2 + 3) - (0^2 + 0)$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_0^3 (2x + 1) \\, dx = \\left[ x^2 + x \\right]_0^3 = (3^2 + 3) - (0^2 + 0) = (9 + 3) - 0 = 12$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-int-02",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "二次多項式定積分計算",
+    "difficulty": "easy",
+    "mathExpression": "\\int_0^2 3x^2 \\, dx",
+    "targetTask": "計算此定積分的數值。",
+    "acceptedAnswers": ["8", "=8"],
+    "standardAnswerLatex": "8",
+    "answerFormatHelp": "請輸入純數值（例如：8）",
+    "hints": {
+      "technique": "反導函數為 $x^3$。",
+      "formulaKey": "微積分基本定理：$\\int_a^b x^n dx = \\left[ \\frac{x^{n+1}}{n+1} \\right]_a^b$。",
+      "stepGuide": "反導函數為 $3 \\cdot \\frac{x^3}{3} = x^3$。\n代入上下限 $2^3 - 0^3$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_0^2 3x^2 \\, dx = \\left[ x^3 \\right]_0^2 = 2^3 - 0^3 = 8 - 0 = 8$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-int-03",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "正弦函數定積分計算",
+    "difficulty": "medium",
+    "mathExpression": "\\int_0^\\pi \\sin(x) \\, dx",
+    "targetTask": "計算此定積分的精確值。",
+    "acceptedAnswers": ["2", "=2"],
+    "standardAnswerLatex": "2",
+    "answerFormatHelp": "請輸入純數值（例如：2）",
+    "hints": {
+      "technique": "$\\sin(x)$ 的反導函數為 $-\\cos(x)$。注意負號運算。",
+      "formulaKey": "三角積分：$\\int \\sin(x) \\, dx = -\\cos(x) + C$。",
+      "stepGuide": "代入上限 $\\pi$ 與下限 $0$：\n$$(-\\cos(\\pi)) - (-\\cos(0)) = -(-1) - (-1) = 1 + 1$$",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_0^\\pi \\sin(x) \\, dx = \\left[ -\\cos(x) \\right]_0^\\pi = (-\\cos(\\pi)) - (-\\cos(0))$$\n已知 $\\cos(\\pi) = -1$，$\\cos(0) = 1$：\n$$= -(-1) - (-1) = 1 + 1 = 2$$"
+    },
+    "xpReward": 110
+  },
+  {
+    "id": "calc-int-04",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "反比倒數定積分計算",
+    "difficulty": "medium",
+    "mathExpression": "\\int_1^e \\frac{1}{x} \\, dx",
+    "targetTask": "計算此定積分的數值（自然底數 e 為上限）。",
+    "acceptedAnswers": ["1", "=1"],
+    "standardAnswerLatex": "1",
+    "answerFormatHelp": "請輸入純數值（例如：1）",
+    "hints": {
+      "technique": "$\\frac{1}{x}$ 的反導函數為自然對數 $\\ln|x|$。",
+      "formulaKey": "核心積分：$\\int \\frac{1}{x} \\, dx = \\ln|x| + C$。",
+      "stepGuide": "計算 $\\ln(e) - \\ln(1)$。注意 $\\ln(e) = 1$ 且 $\\ln(1) = 0$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_1^e \\frac{1}{x} \\, dx = \\left[ \\ln(x) \\right]_1^e = \\ln(e) - \\ln(1) = 1 - 0 = 1$$"
+    },
+    "xpReward": 110
+  },
+  {
+    "id": "calc-int-05",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "分部積分法求值 (Integration by Parts)",
+    "difficulty": "hard",
+    "mathExpression": "\\int_0^1 x e^x \\, dx",
+    "targetTask": "計算此定積分的精確值。",
+    "acceptedAnswers": ["1", "=1"],
+    "standardAnswerLatex": "1",
+    "answerFormatHelp": "請輸入純數值（例如：1）",
+    "hints": {
+      "technique": "使用分部積分公式：$\\int u \\, dv = uv - \\int v \\, du$。令 $u = x, dv = e^x dx$。",
+      "formulaKey": "分部積分：$\\int_a^b u \\, dv = [uv]_a^b - \\int_a^b v \\, du$。",
+      "stepGuide": "1. $du = dx, v = e^x$。\n2. $[x e^x]_0^1 - \\int_0^1 e^x dx = (1\\cdot e - 0) - [e^x]_0^1 = e - (e - 1) = 1$。",
+      "fullSolution": "### 完整計算步驟：\n令 $u = x \\implies du = dx$；$dv = e^x dx \\implies v = e^x$。\n根據分部積分公式：\n$$\\int_0^1 x e^x \\, dx = \\left[ x e^x \\right]_0^1 - \\int_0^1 e^x \\, dx$$\n$$= (1 \\cdot e^1 - 0 \\cdot e^0) - \\left[ e^x \\right]_0^1$$\n$$= e - (e^1 - e^0) = e - (e - 1) = 1$$"
+    },
+    "xpReward": 150
+  },
+  {
+    "id": "calc-int-06",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "反比根式定積分計算",
+    "difficulty": "medium",
+    "mathExpression": "\\int_1^4 \\frac{1}{\\sqrt{x}} \\, dx",
+    "targetTask": "計算此定積分的數值。",
+    "acceptedAnswers": ["2", "=2"],
+    "standardAnswerLatex": "2",
+    "answerFormatHelp": "請輸入純數值（例如：2）",
+    "hints": {
+      "technique": "將 $\\frac{1}{\\sqrt{x}}$ 改寫為冪次形式 $x^{-1/2}$。",
+      "formulaKey": "反導函數：$\\int x^{-1/2} dx = \\frac{x^{1/2}}{1/2} = 2\\sqrt{x}$。",
+      "stepGuide": "計算代入上下限：$2\\sqrt{4} - 2\\sqrt{1} = 2(2) - 2(1) = 4 - 2 = 2$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_1^4 x^{-1/2} \\, dx = \\left[ 2\\sqrt{x} \\right]_1^4 = 2\\sqrt{4} - 2\\sqrt{1} = 2(2) - 2(1) = 4 - 2 = 2$$"
+    },
+    "xpReward": 110
+  },
+  {
+    "id": "calc-int-07",
+    "category": "integral",
+    "categoryName": "積分運算",
+    "categoryBadge": "∫",
+    "title": "三次多項式定積分抵消計算",
+    "difficulty": "easy",
+    "mathExpression": "\\int_0^1 (4x^3 - 6x^2 + 2x) \\, dx",
+    "targetTask": "計算此定積分的精確值。",
+    "acceptedAnswers": ["0", "=0"],
+    "standardAnswerLatex": "0",
+    "answerFormatHelp": "請輸入純數值（例如：0）",
+    "hints": {
+      "technique": "求各項反導函數：$\\int 4x^3 dx = x^4, \\int -6x^2 dx = -2x^3, \\int 2x dx = x^2$。",
+      "formulaKey": "反導函數：$F(x) = x^4 - 2x^3 + x^2$。",
+      "stepGuide": "計算 $F(1) - F(0) = (1 - 2 + 1) - 0 = 0$。",
+      "fullSolution": "### 完整計算步驟：\n$$\\int_0^1 (4x^3 - 6x^2 + 2x) \\, dx = \\left[ x^4 - 2x^3 + x^2 \\right]_0^1 = (1^4 - 2(1^3) + 1^2) - 0 = 1 - 2 + 1 = 0$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-ser-01",
+    "category": "series",
+    "categoryName": "無窮級數",
+    "categoryBadge": "∑",
+    "title": "公比為 1/2 的等比級數求和",
+    "difficulty": "easy",
+    "mathExpression": "\\sum_{n=1}^\\infty \\left(\\frac{1}{2}\\right)^n",
+    "targetTask": "計算此無窮等比級數的總和值。",
+    "acceptedAnswers": ["1", "=1", "S=1"],
+    "standardAnswerLatex": "1",
+    "answerFormatHelp": "請輸入純數值（例如：1）",
+    "hints": {
+      "technique": "首項 $a_1 = \\frac{1}{2}$，公比 $r = \\frac{1}{2}$。利用等比級數求和公式 $S = \\frac{a_1}{1 - r}$。",
+      "formulaKey": "等比級數公式：當 $|r| < 1$ 時，$S = \\frac{a_1}{1 - r}$。",
+      "stepGuide": "代入公式：$S = \\frac{1/2}{1 - 1/2} = \\frac{1/2}{1/2} = 1$。",
+      "fullSolution": "### 完整計算步驟：\n該級數為等比級數：\n首項 $a_1 = \\frac{1}{2}$，公比 $r = \\frac{1}{2}$。\n因為 $|r| = \\frac{1}{2} < 1$，級數收斂且和為：\n$$S = \\frac{a_1}{1 - r} = \\frac{\\frac{1}{2}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{2}}{\\frac{1}{2}} = 1$$"
+    },
+    "xpReward": 100
+  },
+  {
+    "id": "calc-ser-02",
+    "category": "series",
+    "categoryName": "無窮級數",
+    "categoryBadge": "∑",
+    "title": "從 n=0 起算之等比級數求和",
+    "difficulty": "medium",
+    "mathExpression": "\\sum_{n=0}^\\infty \\left(\\frac{1}{3}\\right)^n",
+    "targetTask": "計算此無窮等比級數的和（分數或小數）。",
+    "acceptedAnswers": ["3/2", "1.5", "=3/2", "=1.5"],
+    "standardAnswerLatex": "\\frac{3}{2}",
+    "answerFormatHelp": "請輸入分數 3/2 或小數 1.5",
+    "hints": {
+      "technique": "注意下標從 $n=0$ 開始！首項為 $(1/3)^0 = 1$，公比為 $r = 1/3$。",
+      "formulaKey": "公式：$S = \\frac{a}{1 - r} = \\frac{1}{1 - 1/3}$。",
+      "stepGuide": "計算分母 $1 - \\frac{1}{3} = \\frac{2}{3}$，取倒數得 $\\frac{3}{2}$。",
+      "fullSolution": "### 完整計算步驟：\n1. 確認首項（$n=0$）：\n   $$a_0 = \\left(\\frac{1}{3}\\right)^0 = 1$$\n2. 公比 $r = \\frac{1}{3}$：\n   $$S = \\frac{a_0}{1 - r} = \\frac{1}{1 - \\frac{1}{3}} = \\frac{1}{\\frac{2}{3}} = \\frac{3}{2} = 1.5$$"
+    },
+    "xpReward": 120
+  },
+  {
+    "id": "calc-ser-03",
+    "category": "series",
+    "categoryName": "無窮級數",
+    "categoryBadge": "∑",
+    "title": "泰勒展開式高階項係數求值",
+    "difficulty": "hard",
+    "mathExpression": "f(x) = e^x \\text{ 在 } x=0 \\text{ 處的 } x^3 \\text{ 項係數}",
+    "targetTask": "計算此泰勒展開式中 $x^3$ 項的精確係數（以分數表示）。",
+    "acceptedAnswers": ["1/6", "0.167", "0.1667", "=1/6"],
+    "standardAnswerLatex": "\\frac{1}{6}",
+    "answerFormatHelp": "請輸入分數 1/6 或小數 0.167",
+    "hints": {
+      "technique": "泰勒多項式第 $n$ 項係數公式為 $\\frac{f^{(n)}(0)}{n!}$。",
+      "formulaKey": "泰勒係數：$c_n = \\frac{f^{(n)}(0)}{n!}$，其中 $3! = 3 \\times 2 \\times 1 = 6$。",
+      "stepGuide": "對 $e^x$ 三次微分仍為 $e^x$，$f'''(0) = e^0 = 1$。係數為 $\\frac{1}{3!} = \\frac{1}{6}$。",
+      "fullSolution": "### 完整計算步驟：\n1. 函數 $f(x) = e^x$ 的任意階導數皆為 $f^{(n)}(x) = e^x$。\n2. 在 $x = 0$ 處求值：$f'''(0) = e^0 = 1$。\n3. 根據泰勒公式，$x^3$ 項之係數為：\n   $$c_3 = \\frac{f'''(0)}{3!} = \\frac{1}{3 \\times 2 \\times 1} = \\frac{1}{6} \\approx 0.167$$"
+    },
+    "xpReward": 140
+  },
+  {
+    "id": "calc-ser-04",
+    "category": "series",
+    "categoryName": "無窮級數",
+    "categoryBadge": "∑",
+    "title": "公比為 1/4 的等比級數求和",
+    "difficulty": "medium",
+    "mathExpression": "\\sum_{n=1}^\\infty \\left(\\frac{1}{4}\\right)^n",
+    "targetTask": "計算此無窮等比級數的和（分數或小數）。",
+    "acceptedAnswers": ["1/3", "0.333", "0.33", "=1/3"],
+    "standardAnswerLatex": "\\frac{1}{3}",
+    "answerFormatHelp": "請輸入分數 1/3 或小數 0.333",
+    "hints": {
+      "technique": "首項 $a_1 = \\frac{1}{4}$，公比 $r = \\frac{1}{4}$。代入 $S = \\frac{a_1}{1 - r}$。",
+      "formulaKey": "公式：$S = \\frac{1/4}{1 - 1/4} = \\frac{1/4}{3/4}$。",
+      "stepGuide": "計算 $\\frac{1/4}{3/4} = \\frac{1}{3}$。",
+      "fullSolution": "### 完整計算步驟：\n首項 $a_1 = \\frac{1}{4}$，公比 $r = \\frac{1}{4}$：\n$$S = \\frac{a_1}{1 - r} = \\frac{\\frac{1}{4}}{1 - \\frac{1}{4}} = \\frac{\\frac{1}{4}}{\\frac{3}{4}} = \\frac{1}{3} \\approx 0.333$$"
+    },
+    "xpReward": 120
+  }
+]
