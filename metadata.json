@@ -1,0 +1,6 @@
+{
+  "name": "微積分純計算測驗 (CalcQuest) - Math for Fun",
+  "description": "專注於純計算題的微積分遊戲化測驗！無任何應用問題。支援 Markdown 與即時 LaTeX 數學式渲染、快速數學符號鍵盤、即時漸進式提示與錯題進度隨時複習。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
